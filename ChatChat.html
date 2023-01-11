@@ -50,7 +50,9 @@
 		);
 	};
 
+	
 	if (!window.embedded_svc) {
+		console.log("second block hit");
 		var s = document.createElement('script');
 		s.setAttribute('src', 'https://guildeducation3--chat.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
