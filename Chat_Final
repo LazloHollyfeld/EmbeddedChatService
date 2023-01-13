@@ -25,7 +25,7 @@
 		div2.appendChild(document.createTextNode("7am MST - 7pm MST Mon-Fri"));
 		var sidebar = document.querySelector("div.formContent.embeddedServiceSidebarForm");
 		sidebar.insertBefore(div1, sidebar.childNodes[0]);
-		sidebar.insertBefore(div2, sidebar.childNodes[0]);
+		sidebar.insertAfter(div2, sidebar.childNodes[0]);
                 div1.style.color = "black";
                 div1.style.backgroundColor  = "white";
                 div1.style.padding = "5px";
