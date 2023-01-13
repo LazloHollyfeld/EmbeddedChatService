@@ -19,15 +19,10 @@
             if (!show) {
                 show = true;
                 var li2 = document.createElement("div");
-		var li3 = document.createElement("div");
-		li3.innerHTML = "7am MST - 7pm MST Mon-Fri";
                 li2.style.color = "black";
                 li2.style.backgroundColor  = "white";
                 li2.style.padding = "5px";
-                // li2.appendChild(document.createTextNode("Chat hours are from 7am MST - 7pm MST Mon-Fri"));
-		li2.appendChild(document.createTextNode("Chat hours are from"));
-		li2.appendChild(document.createTextNode("7am MST - 7pm MST Mon-Fri"));
-		//li2.appendChild(li3);
+                li2.appendChild(document.createTextNode("Chat hours are from \r7am MST - 7pm MST Mon-Fri"));
 
                 var sidebar = document.querySelector("div.formContent.embeddedServiceSidebarForm");
                 
