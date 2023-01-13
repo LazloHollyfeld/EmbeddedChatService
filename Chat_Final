@@ -22,7 +22,7 @@
                 li2.style.color = "black";
                 li2.style.backgroundColor  = "white";
                 li2.style.padding = "5px";
-                li2.appendChild(document.createTextNode("Chat hours are from"+<br>+"7am MST - 7pm MST Mon-Fri"));
+                li2.appendChild(document.createTextNode("Chat hours are from"+'<br>'+"7am MST - 7pm MST Mon-Fri"));
                     
                 var sidebar = document.querySelector("div.formContent.embeddedServiceSidebarForm");
                 
