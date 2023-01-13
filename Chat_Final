@@ -29,9 +29,10 @@
                 div1.style.color = "black";
                 div1.style.backgroundColor  = "white";
                 div1.style.padding = "5px";
+		div1.style.fontSize = "small";
 		div2.style.color = "black";
                 div2.style.backgroundColor  = "white";
-                //div2.style.padding = "5px";
+                div2.style.padding = "5px";
 		div2.style.fontSize = "small";
 	
             }
