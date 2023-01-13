@@ -18,17 +18,24 @@
             
             if (!show) {
                 show = true;
-                var li2 = document.createElement("div");
-                li2.style.color = "black";
-                li2.style.backgroundColor  = "white";
-                li2.style.padding = "5px";
-		li2.style.fontSize = "small";
-                li2.appendChild(document.createTextNode("Chat hours are from 7am MST - 7pm MST Mon-Fri"));
+                //var li2 = document.createElement("div");
+		var div1 = document.createElement("div");
+		var div2 = document.createElement("div");
+		div1.appendChild(document.createTextNode("Chat hours are from"));
+		div2.appendChild(document.createTextNode("7am MST - 7pm MST Mon-Fri"));
+		var sidebar = document.querySelector("div.formContent.embeddedServiceSidebarForm");
+		sidebar.insertBefore(div1, sidebar.childNodes[0]);
+		sidebar.insertBefore(div2, sidebar.childNodes[0]);
+                div1.style.color = "black";
+                div1.style.backgroundColor  = "white";
+                div1.style.padding = "5px";
+		//li2.style.fontSize = "small";
+                //li2.appendChild(document.createTextNode("Chat hours are from 7am MST - 7pm MST Mon-Fri"));
 		//li2.style.body = "white-space: pre;"
 
-                var sidebar = document.querySelector("div.formContent.embeddedServiceSidebarForm");
+                //var sidebar = document.querySelector("div.formContent.embeddedServiceSidebarForm");
                 
-                sidebar.insertBefore(li2, sidebar.childNodes[0]);
+                //sidebar.insertBefore(li2, sidebar.childNodes[0]);
             }
             
         });  
