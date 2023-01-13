@@ -29,6 +29,9 @@
                 div1.style.color = "black";
                 div1.style.backgroundColor  = "white";
                 div1.style.padding = "5px";
+		div2.style.color = "black";
+                div2.style.backgroundColor  = "white";
+                div2.style.padding = "5px";
 		//div1.style.fontSize = "small";
                 //li2.appendChild(document.createTextNode("Chat hours are from 7am MST - 7pm MST Mon-Fri"));
 		//li2.style.body = "white-space: pre;"
