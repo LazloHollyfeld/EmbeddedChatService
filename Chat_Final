@@ -18,7 +18,6 @@
             
             if (!show) {
                 show = true;
-                //var li2 = document.createElement("div");
 		var div1 = document.createElement("div");
 		var div2 = document.createElement("div");
 		div1.appendChild(document.createTextNode("Chat hours are from"));
@@ -34,12 +33,10 @@
                 div2.style.backgroundColor  = "white";
                 div2.style.padding = "5px";
 		div2.style.fontSize = "small";
-	
-            }
-            
-        });  
+            	}
+	  });  
 		embedded_svc.settings.widgetHeight = "550px";
-		embedded_svc.settings.autoOpenPostChat = true;
+		embedded_svc.settings.autoOpenPostChat = false;
 
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
