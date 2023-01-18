@@ -38,8 +38,10 @@
 		embedded_svc.settings.widgetHeight = "550px";
 		embedded_svc.settings.autoOpenPostChat = false;
 		
-		embedded_svc.settings.extraPrechatInfo = [
+		embedded_svc.settings.extraPrechatFormDetails = [
 		{
+		"label":"Origin"
+		"value":"Chat"
 		    "entityName":"Case",
 		    "showOnCreate":true,
 		    "saveToTranscript":"CaseId",
@@ -48,8 +50,7 @@
 			"fieldName":"Origin",
 			"doCreate":true,
 			"doFind":false,
-			"label":"Origin"
-			"value":"Chat"
+			
 		    }]
 		}];
 
