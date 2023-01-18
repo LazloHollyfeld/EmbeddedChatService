@@ -38,11 +38,20 @@
 		embedded_svc.settings.widgetHeight = "550px";
 		embedded_svc.settings.autoOpenPostChat = false;
 		
-		/*<input type="hidden" name="liveagent.prechat:caseOrigin" value="Chat" />
-		<input type="hidden" name="liveagent.prechat.findorcreate.map:Case" 
-       		value="Origin,caseOrigin" />
-		<input type="hidden" name="liveagent.prechat.findorcreate.map.doCreate:Case" 
-      		value="Origin,true" />*/
+		embedded_svc.settings.extraPrechatInfo = [
+		{
+		    "entityName":"Case",
+		    "showOnCreate":true,
+		    "saveToTranscript":"CaseId",
+		    "entityFieldMaps": [{
+			"isExactMatch":false,
+			"fieldName":"Origin",
+			"doCreate":true,
+			"doFind":false,
+			"label":"Origin"
+			"value":"Chat"
+		    }]
+		}];
 
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
