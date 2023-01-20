@@ -34,7 +34,29 @@
                 div2.style.padding = "5px";
 		div2.style.fontSize = "small";
             	}
-	  });  
+	  }); 
+	  embedded_svc.addEventHandler("afterMaximize", function(data) {
+            console.log("afterMaximize event was fired.");
+            
+            if (!show) {
+                show = false;
+		var div1 = document.createElement("div");
+		var div2 = document.createElement("div");
+		div1.appendChild(document.createTextNode("Chat hours are from"));
+		div2.appendChild(document.createTextNode("7am MST - 7pm MST Mon-Fri"));
+		var sidebar = document.querySelector("div.formContent.embeddedServiceSidebarForm");
+		sidebar.insertBefore(div2, sidebar.childNodes[0]);
+		sidebar.insertBefore(div1, sidebar.childNodes[0]);
+                div1.style.color = "black";
+                div1.style.backgroundColor  = "white";
+                div1.style.padding = "5px";
+		div1.style.fontSize = "small";
+		div2.style.color = "black";
+                div2.style.backgroundColor  = "white";
+                div2.style.padding = "5px";
+		div2.style.fontSize = "small";
+            	}
+	  }); 
 		embedded_svc.settings.widgetHeight = "550px";
 		embedded_svc.settings.autoOpenPostChat = false;
 
