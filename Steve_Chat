@@ -1,0 +1,119 @@
+<html>
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #063347;
+		font-family: "Nunito Sans", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #063347;
+	}
+	.embeddedServiceSidebarFormField .uiInputSelect>select.select .How_Can_We_Help_You__c slds-style-select select {
+	        
+		font-weight: bold !important;
+	}
+</style>      
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+	var initESW = function(gslbBaseURL) {
+	var show = false;
+        
+        embedded_svc.addEventHandler("afterMaximize", function(data) {
+            console.log("afterMaximize event was fired.");
+            
+            if (!show) {
+                show = true;
+		var div1 = document.createElement("div");
+		var div2 = document.createElement("div");
+		div1.appendChild(document.createTextNode("Chat hours are from"));
+		div2.appendChild(document.createTextNode("7am MST - 7pm MST Mon-Fri"));
+		var sidebar = document.querySelector("div.formContent.embeddedServiceSidebarForm");
+		sidebar.insertBefore(div2, sidebar.childNodes[0]);
+		sidebar.insertBefore(div1, sidebar.childNodes[0]);
+                div1.style.color = "black";
+                div1.style.backgroundColor  = "white";
+                div1.style.padding = "5px";
+		div1.style.fontSize = "small";
+		div2.style.color = "black";
+                div2.style.backgroundColor  = "white";
+                div2.style.padding = "5px";
+		div2.style.fontSize = "small";
+            	}
+	  }); 
+	  embedded_svc.addEventHandler("afterMaximize", function(data) {
+            console.log("afterMaximize event was fired.");
+            
+            if (!show) {
+                show = false;
+		var div1 = document.createElement("div");
+		var div2 = document.createElement("div");
+		div1.appendChild(document.createTextNode("Chat hours are from"));
+		div2.appendChild(document.createTextNode("7am MST - 7pm MST Mon-Fri"));
+		var sidebar = document.querySelector("div.formContent.embeddedServiceSidebarForm");
+		sidebar.insertBefore(div2, sidebar.childNodes[0]);
+		sidebar.insertBefore(div1, sidebar.childNodes[0]);
+                div1.style.color = "black";
+                div1.style.backgroundColor  = "white";
+                div1.style.padding = "5px";
+		div1.style.fontSize = "small";
+		div2.style.color = "black";
+                div2.style.backgroundColor  = "white";
+                div2.style.padding = "5px";
+		div2.style.fontSize = "small";
+            	}
+	  }); 
+		embedded_svc.settings.widgetHeight = "550px";
+		embedded_svc.settings.autoOpenPostChat = false;
+
+		embedded_svc.settings.displayHelpButton = true; //Or false
+		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+
+		embedded_svc.settings.defaultMinimizedText = 'Chat'; //(Defaults to Chat with an Expert)
+		embedded_svc.settings.disabledMinimizedText = 'Submit a Case'; //(Defaults to Agent Offline)
+
+		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+
+		// Settings for Chat
+		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+			// Returns a valid button ID.
+		//};
+		//embedded_svc.settings.prepopulatedPrechatFields = 
+		//	{
+		//	   How_Can_We_Help_You__c: "I have a question about the program I'm enrolled in"
+		//	}; //Sets the auto-population of pre-chat form fields __default_none__
+		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+		embedded_svc.settings.offlineSupportMinimizedText = 'Submit a Case'; //(Defaults to Contact Us)
+
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+
+		embedded_svc.init(
+			'https://guildeducation3--chat.my.salesforce.com',
+			'https://chat-ms2demo.cs221.force.com/HelpCenter',
+			gslbBaseURL,
+			'00D8I0000008iBH',
+			'Help_Center',
+			{
+				baseLiveAgentContentURL: 'https://c.la4-c1cs-ia4.salesforceliveagent.com/content',
+				deploymentId: '5728I000000Gmii',
+				buttonId: '5738I0000008ORX',
+				baseLiveAgentURL: 'https://d.la4-c1cs-ia4.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I8I000000007gUAA_1858398b63c',
+				isOfflineSupportEnabled: true
+			}
+		);
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://guildeducation3--chat.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+</script>
+</html>
