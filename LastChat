@@ -76,7 +76,7 @@
 		//};
 		embedded_svc.settings.prepopulatedPrechatFields = 
 			{
-			   How_Can_We_Help_You__c: "__default_none__"
+			   How_Can_We_Help_You__c: "None"
 			}; //Sets the auto-population of pre-chat form fields __default_none__
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		embedded_svc.settings.offlineSupportMinimizedText = 'Submit a Case'; //(Defaults to Contact Us)
