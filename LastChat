@@ -7,8 +7,10 @@
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
 		outline: 1px solid #063347;
 	}
-	.How_Can_We_Help_You__c-label:firstchild {
+	.embeddedServiceSidebarFormField .slds-style-inputtext, .embeddedServiceSidebarFormField .slds-style-select {
 	        background-color: yellow !important;
+		value: "hello" !important;
+		font-weight: bold !important;
 	}
 </style>      
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
