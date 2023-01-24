@@ -8,7 +8,7 @@
 		outline: 1px solid #063347;
 	}
 	.How_Can_We_Help_You__c-label {
-	        value: '-None-';
+	        background-color: yellow;
 	}
 </style>      
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
