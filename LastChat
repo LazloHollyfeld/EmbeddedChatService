@@ -8,8 +8,7 @@
 		outline: 1px solid #063347;
 	}
 	.embeddedServiceSidebarFormField .slds-style-inputtext, .embeddedServiceSidebarFormField .slds-style-select {
-	        background-color: yellow !important;
-		value: "hello" !important;
+	        
 		font-weight: bold !important;
 	}
 </style>      
