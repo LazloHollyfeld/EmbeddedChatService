@@ -7,7 +7,7 @@
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
 		outline: 1px solid #063347;
 	}
-	.How_Can_We_Help_You__c-label {
+	.How_Can_We_Help_You__c-label:firstchild {
 	        background-color: yellow !important;
 	}
 </style>      
