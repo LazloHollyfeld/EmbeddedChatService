@@ -7,6 +7,9 @@
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
 		outline: 1px solid #063347;
 	}
+	.How_Can_We_Help_You__c-label {
+	        value: '-None-';
+	}
 </style>      
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
@@ -74,10 +77,10 @@
 			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
 			// Returns a valid button ID.
 		//};
-		embedded_svc.settings.prepopulatedPrechatFields = 
-			{
-			   How_Can_We_Help_You__c: "I have a question about the program I'm enrolled in"
-			}; //Sets the auto-population of pre-chat form fields __default_none__
+		//embedded_svc.settings.prepopulatedPrechatFields = 
+		//	{
+		//	   How_Can_We_Help_You__c: "I have a question about the program I'm enrolled in"
+		//	}; //Sets the auto-population of pre-chat form fields __default_none__
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		embedded_svc.settings.offlineSupportMinimizedText = 'Submit a Case'; //(Defaults to Contact Us)
 
