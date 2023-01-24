@@ -7,7 +7,7 @@
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
 		outline: 1px solid #063347;
 	}
-	.embeddedServiceSidebarFormField .slds-style-inputtext, .embeddedServiceSidebarFormField .slds-style-select {
+	.embeddedServiceSidebarFormField .uiInputSelect>select.select {
 	        
 		font-weight: bold !important;
 	}
